@@ -1,0 +1,24 @@
+version: '3.8'
+services:
+  nitro:
+    image: offchainlabs/nitro-node:v2.3.3-6a1c1a7
+    ports:
+      - '8449:8449'
+      - '8548:8548'
+    volumes:
+      - './config:/home/user/.arbitrum'
+    command: >
+      --conf.file /home/user/.arbitrum/nodeConfig.json
+      --ws.port=8548
+      --ws.addr=0.0.0.0
+      --ws.origins=*
+  das-server:
+    image: offchainlabs/nitro-node:v2.3.3-6a1c1a7
+    entrypoint: ['/bin/bash', '/das-server.sh']
+    volumes:
+      - './config:/home/user/.arbitrum'
+      - './das-server.sh:/das-server.sh'
+      - './das-data:/home/user/das-data'
+    ports:
+      - '9876:9876'
+      - '9877:9877'

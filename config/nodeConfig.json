@@ -1,0 +1,75 @@
+{
+    "chain": {
+        "info-json": "[{\"chain-id\":73871202146,\"parent-chain-id\":42161,\"parent-chain-is-arbitrum\":true,\"chain-name\":\"Tagtal Orbit Devnet\",\"chain-config\":{\"homesteadBlock\":0,\"daoForkBlock\":null,\"daoForkSupport\":true,\"eip150Block\":0,\"eip150Hash\":\"0x0000000000000000000000000000000000000000000000000000000000000000\",\"eip155Block\":0,\"eip158Block\":0,\"byzantiumBlock\":0,\"constantinopleBlock\":0,\"petersburgBlock\":0,\"istanbulBlock\":0,\"muirGlacierBlock\":0,\"berlinBlock\":0,\"londonBlock\":0,\"clique\":{\"period\":0,\"epoch\":0},\"arbitrum\":{\"EnableArbOS\":true,\"AllowDebugPrecompiles\":false,\"DataAvailabilityCommittee\":true,\"InitialArbOSVersion\":20,\"GenesisBlockNum\":0,\"MaxCodeSize\":24576,\"MaxInitCodeSize\":49152,\"InitialChainOwner\":\"0xF851B3cF1B482ce699FD6DcB329D713b6D55532c\"},\"chainId\":73871202146},\"rollup\":{\"bridge\":\"0x106DC4aB4161698278dC511d067B670224772C15\",\"inbox\":\"0x8FF3C239aC2f9EDE4Fd725cC97eD3D6a854e4Ad0\",\"sequencer-inbox\":\"0xebd9D826Da330f1eB28361945EcC5DD3451918d4\",\"rollup\":\"0xbaAc5E18720bB996a76Fe2F411f9032a62774c3b\",\"validator-utils\":\"0x6c21303F5986180B1394d2C89f3e883890E2867b\",\"validator-wallet-creator\":\"0x2b0E04Dc90e3fA58165CB41E2834B44A56E766aF\",\"deployed-at\":255117971}}]",
+        "name": "Tagtal Orbit Devnet"
+    },
+    "parent-chain": {
+        "connection": {
+            "url": "https://arb1.arbitrum.io/rpc"
+        }
+    },
+    "http": {
+        "addr": "0.0.0.0",
+        "port": 8449,
+        "vhosts": [
+            "*"
+        ],
+        "corsdomain": [
+            "*"
+        ],
+        "api": [
+            "eth",
+            "net",
+            "web3",
+            "arb",
+            "debug"
+        ]
+    },
+    "node": {
+        "sequencer": true,
+        "delayed-sequencer": {
+            "enable": true,
+            "use-merge-finality": false,
+            "finalize-distance": 1
+        },
+        "staker": {
+            "enable": true,
+            "strategy": "MakeNodes",
+            "parent-chain-wallet": {
+                "private-key": "0x50c14d4fde0dd679b403fd8032f85af68fc7bbf84ed97e21652c38c3e61dc064"
+            }
+        },
+        "dangerous": {
+            "no-sequencer-coordinator": true,
+            "disable-blob-reader": false
+        },
+        "data-availability": {
+            "enable": true,
+            "sequencer-inbox-address": "0xebd9D826Da330f1eB28361945EcC5DD3451918d4",
+            "parent-chain-node-url": "https://arb1.arbitrum.io/rpc",
+            "rest-aggregator": {
+                "enable": true,
+                "urls": [
+                    "http://das-server:9877"
+                ]
+            },
+            "rpc-aggregator": {
+                "enable": true,
+                "assumed-honest": 2,
+                "backends": "[{\"url\":\"http://13.202.43.45:9876\",\"pubkey\":\"YAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==\",\"signermask\":1},{\"url\":\"http://3.110.82.152:9876\",\"pubkey\":\"YA8KkIFZaXW875vunT+3OMRHm/iGtwa0YTIjqZZvgLTAfvwO/3DEkFTKXV7EmlGyuARWqqjIWzMTmsonV4CeXbGWC5W9CrTiOmK8CGekf/c0t1vARPUKCwldr0ctdH6m5BResT9ZqLFuwtE2Vs9SUeYh5hfXdzzEWKYNcbthVg4pRz1VZBXadAmlQtl3WUDMHBTJKAR54GsBvFS/mETF06QZk7QV02SXk51lrEfXQL0UH+QS4g3Bvjp8sCjZv1AGqgRwUfU6TKrtizrkOuVTY7gu3vL6wBS3wO6knb5dwyug0zKfhIrExeWLfrNWOYFq0g2peNAh38O55vbw4mr8ujuUeBInxNPE0xgljNUPSIoJ4PF36gOM82hkSWFPgZuoxQ==\",\"signermask\":2}]"
+            }
+        },
+        "archival": true
+    },
+    "execution": {
+        "forwarding-target": "",
+        "sequencer": {
+            "enable": true,
+            "max-tx-data-size": 85000,
+            "max-block-speed": "250ms"
+        },
+        "caching": {
+            "archive": true
+        }
+    }
+}
