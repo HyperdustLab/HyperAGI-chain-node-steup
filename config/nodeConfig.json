@@ -36,12 +36,8 @@
             "enable": true,
             "strategy": "MakeNodes",
             "parent-chain-wallet": {
-                "private-key": "0x"
+                "private-key": ""
             }
-        },
-        "dangerous": {
-            "no-sequencer-coordinator": true,
-            "disable-blob-reader": false
         },
         "data-availability": {
             "enable": true,
@@ -52,14 +48,12 @@
                 "urls": [
                     "http://das-server:9877"
                 ]
-            },
-            "rpc-aggregator": {
-                "enable": true,
-                "assumed-honest": 2,
-                "backends": "[{\"url\":\"http://13.202.43.45:9876\",\"pubkey\":\"YAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==\",\"signermask\":1},{\"url\":\"http://3.110.82.152:9876\",\"pubkey\":\"YA8KkIFZaXW875vunT+3OMRHm/iGtwa0YTIjqZZvgLTAfvwO/3DEkFTKXV7EmlGyuARWqqjIWzMTmsonV4CeXbGWC5W9CrTiOmK8CGekf/c0t1vARPUKCwldr0ctdH6m5BResT9ZqLFuwtE2Vs9SUeYh5hfXdzzEWKYNcbthVg4pRz1VZBXadAmlQtl3WUDMHBTJKAR54GsBvFS/mETF06QZk7QV02SXk51lrEfXQL0UH+QS4g3Bvjp8sCjZv1AGqgRwUfU6TKrtizrkOuVTY7gu3vL6wBS3wO6knb5dwyug0zKfhIrExeWLfrNWOYFq0g2peNAh38O55vbw4mr8ujuUeBInxNPE0xgljNUPSIoJ4PF36gOM82hkSWFPgZuoxQ==\",\"signermask\":2}]"
             }
         },
-        "archival": true
+        "dangerous": {
+            "no-sequencer-coordinator": true,
+            "disable-blob-reader": false
+        }
     },
     "execution": {
         "forwarding-target": "",
