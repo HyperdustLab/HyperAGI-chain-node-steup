@@ -36,7 +36,7 @@
             "enable": true,
             "strategy": "MakeNodes",
             "parent-chain-wallet": {
-                "private-key": "0x50c14d4fde0dd679b403fd8032f85af68fc7bbf84ed97e21652c38c3e61dc064"
+                "private-key": "0x"
             }
         },
         "dangerous": {
