@@ -26,12 +26,6 @@
         ]
     },
     "node": {
-        "sequencer": true,
-        "delayed-sequencer": {
-            "enable": true,
-            "use-merge-finality": false,
-            "finalize-distance": 1
-        },
         "staker": {
             "enable": true,
             "strategy": "MakeNodes",
@@ -46,8 +40,13 @@
             "rest-aggregator": {
                 "enable": true,
                 "urls": [
-                    "http://das-server:9877"
+                    "http://13.202.43.45:9877"
                 ]
+            }
+        },
+        "feed": {
+            "input": {
+                "url": "ws://13.202.43.45:9642"
             }
         },
         "dangerous": {
@@ -56,14 +55,9 @@
         }
     },
     "execution": {
-        "forwarding-target": "",
-        "sequencer": {
-            "enable": true,
-            "max-tx-data-size": 85000,
-            "max-block-speed": "250ms"
-        },
+        "forwarding-target": "https://tagtal-rpc.hyperagi.network",
         "caching": {
-            "archive": true
+            "archive": false
         }
     }
 }
