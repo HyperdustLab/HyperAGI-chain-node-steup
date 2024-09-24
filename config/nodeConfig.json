@@ -5,7 +5,7 @@
     },
     "parent-chain": {
         "connection": {
-            "url": "https://arb1.arbitrum.io/rpc"
+            "url": "https://arb-mainnet.g.alchemy.com/v2/vTui_0I53TEWyyhW172URtI0W93wstRv"
         }
     },
     "http": {
@@ -28,18 +28,19 @@
     "node": {
         "staker": {
             "enable": true,
-            "strategy": "MakeNodes",
+            "strategy": "ResolveNodes",
             "parent-chain-wallet": {
-                "private-key": ""
+                "private-key": "5630cad48b3067cef880bd3a0c5b77d5934de5f2ce4f3e63487b697102c89e73"
             }
         },
         "data-availability": {
             "enable": true,
             "sequencer-inbox-address": "0xebd9D826Da330f1eB28361945EcC5DD3451918d4",
-            "parent-chain-node-url": "https://arb1.arbitrum.io/rpc",
+            "parent-chain-node-url": "https://arb-mainnet.g.alchemy.com/v2/vTui_0I53TEWyyhW172URtI0W93wstRv",
             "rest-aggregator": {
                 "enable": true,
                 "urls": [
+                    "http://das-server:9877",
                     "http://13.202.43.45:9877"
                 ]
             }
