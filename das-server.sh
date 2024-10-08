@@ -26,15 +26,14 @@ if jq -e '.node | has("data-availability")' "$NODE_CONFIG" >/dev/null; then
         --enable-rest \
         --rest-addr '0.0.0.0' \
         --log-level 5 \
-        --data-availability.local-db-storage.enable \
-        --data-availability.local-db-storage.data-dir /home/user/das-data \
-        --data-availability.local-db-storage.discard-after-timeout=true \
+        --data-availability.local-file-storage.enable \
+        --data-availability.local-file-storage.data-dir /home/user/das-data \
         --data-availability.s3-storage.enable \
-        --data-availability.s3-storage.access-key "$S3_ACCESS_KEY" \
-        --data-availability.s3-storage.bucket "$S3_BUCKET" \
-        --data-availability.s3-storage.region "$S3_REGION" \
-        --data-availability.s3-storage.secret-key "$S3_SECRET_KEY" \
-        --data-availability.s3-storage.object-prefix "$S3_OBJECT_PREFIX" \
+        --data-availability.s3-storage.access-key "" \
+        --data-availability.s3-storage.bucket "" \
+        --data-availability.s3-storage.region "" \
+        --data-availability.s3-storage.secret-key "" \
+        --data-availability.s3-storage.object-prefix "" \
         --data-availability.key.key-dir /home/user/.arbitrum/keys \
         --data-availability.local-cache.enable \
         --data-availability.rest-aggregator.enable \
