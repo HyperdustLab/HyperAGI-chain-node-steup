@@ -30,7 +30,7 @@
             "enable": true,
             "strategy": "ResolveNodes",
             "parent-chain-wallet": {
-                "private-key": "5630cad48b3067cef880bd3a0c5b77d5934de5f2ce4f3e63487b697102c89e73"
+                "private-key": ""
             }
         },
         "data-availability": {
